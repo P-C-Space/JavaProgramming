@@ -1,0 +1,22 @@
+= Programming in the Small 1 : Names and Things
+
+== 2.1 The Basic Java Applicaiton
+
+[source, java]
+optional-package-declaration
+optional-imports
+public class program-name{
+    optional-variable-declarations-and-subroutines
+    public static void main(String[] args){
+        statements
+    }
+    optional-variable-declarations-and-subroutines
+}
+
+== 2.2 Variable and the Primitive Types
+
+=== Variables
+* A name used in this way-to refer to data stored in memory-is called a variable.
+
+[source, java]
+variable = expression;
