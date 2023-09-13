@@ -6,6 +6,7 @@
 - 블록은 구조화된 문장의 가장 단순한 유형
 
 [source, java]
+----
 {
     // 블록의 형태
     statements
@@ -18,19 +19,164 @@
     System.out.println("The answer is")
     System.out.println(ans);
 }
+----
 
 === The Basic While Loop
+----
 [source, java]
 while (boolean-expression){
     // Loop-while문의 블록
     // false 시에 종료
     statement
 }
+----
 
 === The Basic If Statement
 [source, java]
+----
 if (boolean-expression)
     statement1
 else
     statement
-// while의 조건과 다른점은 if는 한번만 실행된다는 것
+----
+
+// while의 조건과 다른점은 if는 한번만 실행된다는
+
+- 이것은 제어 추상화 예
+- 변수는 데이터 추상화 예
+
+=== Definite Assignment(확정적 할당)
+[source, java]
+----
+int y;
+if( x < 0 ) {
+    y = 1;
+}
+else {
+    y = 2;
+}
+or
+int y;
+if ( x < 0 ) {
+    y = 1;
+}
+if ( x >= 0 ) {
+    y = 2;
+}
+----
+
+== Algorithm Development
+- 프로그램은 아이디어의 표현
+- 문제를 완벽하고, 모호하지 않은, 단계별 작업 절차로 구체화 하는 방식 -> 알고리즘
+
+=== Pseudocode and Stepwise Refinement ( 유사 코드 및  단계적 개량 )
+[source, java]
+----
+사용자의 입력을 받는다
+1년 후의 투자금액을 계산한다.
+금액을 표시
+2년 후의 금액 계산
+금액을 표시
+...
+----
+
+- 전체를 생각하고 줄이는 과정 - 단계적 개량
+
+[source, java]
+----
+사용자의 입력을 받는다
+처리할 많은 해가 있는 동안에는:
+    다음 해의 금액을 계산한다.
+    금액을 표시한다.
+----
+
+[source, java]
+----
+// 계수루프
+// year에 대한 조건문이지만 항상 참으로 진행되기 때문에
+// year 변경하는 코드를 작성해야 한다.
+year = 0
+while years < 5:
+    years = years + 1
+    이자를 계산한다.
+    금액에 이자를 더한다.
+    금액을 표시한다.
+----
+
+[source, java]
+----
+import java.util.Scanner;
+
+public class ThreeN1 {
+    public static void main(String[] args){
+        int N;
+        int counter;
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("순서의 시작점 : ");
+        N = s.nextInt();
+
+        while(N <= 0){
+            System.out.print("순서의 시작점은 반드시 양수여야 합니다. 다시 입력하세요 : ");
+            N = s.nextInt();
+        }
+        // N 이 0보다 큼
+
+        count = 0;
+        while(N != 1){
+            if(N % 2 == 0)
+                N = N/2;
+            else
+                N = 3 * N + 1;
+            System.out.println(N);
+            counter = counter + 1;
+        }
+        System.out.println();
+        System.out.print("순서에는 ");
+        System.out.print(counter);
+        System.out.println(" 개의 항목이 있습니다.");
+        s.close();
+    }
+}
+----
+
+=== Coding, Testing, Debugging
+- 테스트의 목적은 bug(버그)를 찾는것
+- 컴파일 보다는 잘못된 행위의 의미론적 오류
+- debugging(디버깅)은 버그 원인을 추적하는 과정
+- 그 과정을 도와주는 Debugger(디버그), breakpoint(중단점)
+
+== The while and do..while Statements
+- body of the loop - loop 본체
+- continuation condition, Test - boolean-expression
+- sentinel value(감시값) - boolean-expression에서 쓰이는 변수
+- priming the loop(루프 예열하기) - while문의 처음 실행할 수 있도록 하는 것
+- off-by-one error - 1차이로 나는 흔한 에러
+
+=== do..while문
+- flag or flag variable - 감시값과 다르게 boolean개념
+- 감시값은 변하는 값에 대해 기준에 충족하는지 감시하는 역할
+
+
+=== break
+- loop 중단
+- bigloop - label
+- break를 쓸 때 추가적인 요소 해당 라벨의 loop을 중단
+[source, java]
+----
+boolean nothingInCommon;
+nothingInCommon = true;
+int i,j;
+
+bigloop: while(i < s1.length()){
+    j = 0;
+    while( j < s2.lenth()){
+        if(s1.charAt(i) == s2.charAt(j)){
+            nothingInCommon = false;
+            break bigloop;
+        }
+        j++;
+    }
+    i++;
+}
+----
