@@ -180,3 +180,65 @@ bigloop: while(i < s1.length()){
     i++;
 }
 ----
+
+== The for Statement
+- while -> for문 변경의 예
+[source, java]
+----
+years = 0;
+while( years < 5){
+    interest = principal * rate;
+    principal += interest;
+    System.out.println(principal);
+
+    year++;
+}
+
+for( years = 0; years < 5; years++){
+    interest = principal * rate;
+    principal += interest;
+    System.out.println(principal);
+}
+----
+[source, java]
+----
+for(initializtion; continuation-condition; update){
+    statement
+}
+----
+- continuation-condition은 boolean-expression value여야만 한다
+- initialization은 선언문이나 할당문이지만, 프로그램에서 문자으로서 허용되는 어떤 표현식도 가능
+- update는 간단한 문장도 가능하지만 일반적으로 증가, 감소 할당문이다.
+- 세 부분 중 어떤 곳도 비워둘 수 있으나 연속조건이 비워져 있으면 while(true)와 동일하다
+- 위에 쓰인 years는 loop control variable(루프제어변수)라고 한다.
+- 일반적인 유형은 counting loop이며 min값과 max값을 가진 다.
+- 약수세기, 중첩 루프
+
+== The If Statement
+- 기본 형태의 If문
+[source, java]
+----
+if(boolean-expression)
+    statement-1
+else
+    statement-2
+----
+- 중첩 형태, 또는 else if의 다양한 형태 존재(Multiway Branching - 다방향 분기화)
+[source, java]
+----
+if ( done )
+   ;  // 빈 문장
+else
+   System.out.println( "아직 안 됨.");
+----
+- if가 true 일때 빈문장으로 아무 것도 실행을 하지 않는다.
+- 하지만 false는 else문으로 '아직 안 됨.'이 출력이 된다.
+- 이는 for문에도 해당되며 다음과 같은 코드는 한번씩만 실행 된다.
+[source, java]
+----
+for (i = 0; i < 10; i++);
+    System.out.println("Hello");
+
+----
+
+== The switch Statement
