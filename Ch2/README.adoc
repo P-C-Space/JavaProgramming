@@ -1,7 +1,5 @@
 = Programming in the Small 1 : Names and Things
-
 == 2.1 The Basic Java Applicaiton
-
 [source, java]
 optional-package-declaration
 optional-imports
@@ -12,6 +10,12 @@ public class program-name{
     }
     optional-variable-declarations-and-subroutines
 }
+
+=== semantics(의미론)
+- 코더가 의미하는 바
+
+=== syntax(구문)
+- 코드의 문법(작성 규칙)
 
 == 2.2 Variable and the Primitive Types
 
