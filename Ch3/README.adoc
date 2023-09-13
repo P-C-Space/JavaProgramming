@@ -1,0 +1,36 @@
+= Programming in the Small 2 : Control
+
+== Blocks, Looops, and Branches
+
+=== Blocks
+- 블록은 구조화된 문장의 가장 단순한 유형
+
+[source, java]
+{
+    // 블록의 형태
+    statements
+}
+{
+    String ans = "me, too";
+    // local variable
+    // scope 식별자의 범위
+    // 이 변수를 사용할 수 있는 범위
+    System.out.println("The answer is")
+    System.out.println(ans);
+}
+
+=== The Basic While Loop
+[source, java]
+while (boolean-expression){
+    // Loop-while문의 블록
+    // false 시에 종료
+    statement
+}
+
+=== The Basic If Statement
+[source, java]
+if (boolean-expression)
+    statement1
+else
+    statement
+// while의 조건과 다른점은 if는 한번만 실행된다는 것
