@@ -242,3 +242,55 @@ for (i = 0; i < 10; i++);
 ----
 
 == The switch Statement
+- 특정 자료형만 가능 - (불가능 : double, float)
+- char, String, int, long
+- case에서는 constant만 가능
+[source, java]
+----
+switch(expression){
+    case constant-1:
+        statements-1
+        break;
+    case constant-2:
+        statements-2
+        break;
+    default:
+        statements-(N+1)
+}
+----
+- Switch Enum
+- Definite Assignment and switch Statements(확정적 할당)
+- 위는 default를 사용함으로써 가능하기도 하다.
+- 다중 switch문
+
+== Introduction to Exceptions and try..catch
+- try-catch
+- 오류가 발생할 수 있는 문장에 사용
+- try문의 예외(오류)를 catch문에서 처리
+[source, java]
+----
+try {
+    statements-1
+}
+catch (exception-class-name variable-name) {
+    statements-2
+}
+----
+- error는 수습할 수 없는 에러
+- Exception 수습할 수 있는 예외
+- checked Exception
+- Compile시에 확인
+- unchecked Exception
+- compile시에 확인하지 않음
+
+== Introduction to Arrays
+=== Creating and Using Arrays
+[source, java]
+----
+array-variable = new base-type[array-length];
+----
+- 배열은 보편적으로 sequential access 사용
+- random Access를 사용할 수 있다는 장점
+- 순차적으로 접근하지 않아도 된다.
+- 크기는 변경할 수 없다.
+- 2차원 배열도 가능
