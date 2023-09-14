@@ -18,8 +18,32 @@
 ```
 
 == 4. while 루프와 do..while루프의 중요한 차이점은 무엇인가?
+```
+while은 조건을 검사하고 실행하는 것이고, do..while은 한번은 무조건 실행한 후 조건을 검사한다.
+```
 
 == 5. 루프를 예열한다(prime a loop)는 것은 무엇을 의마하는가?
+```
+while loop에 들어가기 전에 조건에 맞추는 것
+```
 
 == 7. 3부터 36까지의 3의 배수, 즉 3,6,9, ...,36을 출력하는 for문을 작성하라
 [source,java]
+----
+for(int i = 3; i <= 36; i += 3){
+    System.out.println(i);
+}
+----
+
+== 8. 사용자의 응답을 읽고(정수) 짝수인지 홀수인지 체크하는 코드
+[souce,java]
+----
+public static void main(String[] args){
+    int n = TextIo.getInt();
+    if(n % 2 == 0)
+        System.out.println("짝수");
+    else{
+        System.out.println("홀수");
+    }
+}
+----
