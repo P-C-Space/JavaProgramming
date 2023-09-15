@@ -1,3 +1,5 @@
+package Exercise;
+
 public class P2 {
     public static void main(String[] args) {
         int[] count = new int[10001];

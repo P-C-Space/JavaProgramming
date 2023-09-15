@@ -1,3 +1,5 @@
+package Exercise;
+
 import java.util.Scanner;
 
 public class P4 {
