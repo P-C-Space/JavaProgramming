@@ -1,8 +1,8 @@
-package Ch2;
+package Ch2.src.Exercise;
 
 public class P7 {
     public static void main(String[] args) {
-        TextIO.readFile("./Ch2/testdata.txt");
+        TextIO.readFile("Ch2/src/Exercise/testdata.txt");
         String name = TextIO.getln();
         int score1 = TextIO.getlnInt();
         int score2 = TextIO.getlnInt();

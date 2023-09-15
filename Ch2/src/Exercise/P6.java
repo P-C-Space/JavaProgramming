@@ -1,6 +1,4 @@
-package Ch2;
-
-import Ch2.TextIO;
+package Ch2.src.Exercise;
 
 public class P6 {
     public static void main(String[] args) {

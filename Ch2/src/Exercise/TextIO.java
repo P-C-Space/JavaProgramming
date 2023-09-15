@@ -1,4 +1,4 @@
-package Ch2;
+package Ch2.src.Exercise;
 
 import java.io.*;
 import java.util.IllegalFormatException;
