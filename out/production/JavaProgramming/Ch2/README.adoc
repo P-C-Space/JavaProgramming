@@ -75,6 +75,3 @@ variable = expression;
 [source,java]
 enum enum-type-name { list-of-enum-values}
 enum Day{SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY}
-
-== 2.4 Text Input and Output
-- 
