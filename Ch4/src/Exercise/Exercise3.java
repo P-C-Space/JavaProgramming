@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Exercise3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int count = sumDoubleDice(2);
+        int input = scanner.nextInt();
+        int count = sumDoubleDice(input);
         System.out.println("걸린 횟수 : " + count);
         scanner.close();
     }
