@@ -212,5 +212,6 @@ buildNumber.properties
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij,java,macos,maven
+# DON'T CHANGE THIS FILE!
 .idea
 *.iml
