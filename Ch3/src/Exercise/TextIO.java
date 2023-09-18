@@ -1,4 +1,4 @@
-package Exercise;
+package exercise;
 
 import java.io.BufferedReader;
 import java.io.File;
