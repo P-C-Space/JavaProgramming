@@ -215,3 +215,4 @@ buildNumber.properties
 # DON'T CHANGE THIS FILE!
 .idea
 *.iml
+*.json

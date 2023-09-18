@@ -8,7 +8,7 @@
 - 자바에서 class는 내장 자료형과 유사항 Type(자료형)이다.
 ```
 In java, no variable can ever hold an object. A variable can only hold a reference to an object.
-자바에서는, 어떤한 벼순도 객체를 가질수 없다. 변수는 오로지 객체에 대한 참조만을 보유할 수 있다.
+자바에서는, 어떤한 변수도 객체를 가질수 없다. 변수는 오로지 객체에 대한 참조만을 보유할 수 있다.
 ```
 - 객체는 Heap이라는 공간에 있고, 변수는 객체를 보유하는 것 대신 Reference & Pointer (참조)한다.
 - 따라서 객체는 new라는 선언을 통해 생성한다.

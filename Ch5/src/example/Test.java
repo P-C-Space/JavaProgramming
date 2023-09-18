@@ -4,6 +4,7 @@ public class Test {
     public static void main(String[] args) {
         final Student stu = new Student();
         System.out.println("hello?");
+        
 
         System.out.println(stu.name);
     }
