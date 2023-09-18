@@ -58,3 +58,9 @@ When one object variable is assigned to another, only a reference is copied. The
 - 다중상속은 불가능 하기 때문에 기능적 요소를 추가하기위해 Interfcae를 사용하여 상속(확장한다)받는다.
 
 == Nested Classes
+
+=== Inner Class
+- 내부 클래스에서 외부 클래스 멤버에 쉽게 접근이 가능
+- 관련된 클래스를 논리적으로 묶어 코드의 캡술화 증가
+- 외부에서 내부 클래스에 접근이 안되기 때문에 코드의 복잡성을 줄임
+- Static Clss, Instance Class, Local class, Anonymous Class 
