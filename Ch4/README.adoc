@@ -214,3 +214,8 @@ System.out.println(sum(Math::sqrt,1,100));
 
 === package
 - java, lang, util
+
+== 토론
+method 영역
+initialize vs assignment
+side-Effect
