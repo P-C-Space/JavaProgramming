@@ -12,24 +12,27 @@ public class Main {
     public static void main(String[] args) {
         double[] array = new double[ARRAY_SIZE];
         for (int i = 0; i < ARRAY_SIZE; i++) {
-            array[i] =  (Math.random() * 1000000 + 1);
+            array[i] = (Math.random() * 1000000 + 1);
         }
 
         StringBuilder stringBuilder = new StringBuilder();
         long startTime, endTime, myTime, systemTime;
 
+        // 선택 정렬
         startTime = System.nanoTime();
         selectionSort(array);
         endTime = System.nanoTime();
         myTime = endTime - startTime;
         stringBuilder.append("내가 만든 선택정렬 시간 : " + myTime + "ns\n");
 
+        // Arrays.sort
         startTime = System.nanoTime();
         Arrays.sort(array);
         endTime = System.nanoTime();
         systemTime = endTime - startTime;
         stringBuilder.append("Arrays.sort 시간 : " + systemTime + "ns\n");
 
+        // merge sort
         startTime = System.nanoTime();
         mergeSort(array, 0, array.length - 1);
         endTime = System.nanoTime();
@@ -39,7 +42,7 @@ public class Main {
 
         // Collection Sort
         List<Double> arrayToList = new ArrayList<>();
-        for(double value : arrayToList){
+        for (double value : arrayToList) {
             arrayToList.add(value);
         }
 
@@ -49,6 +52,12 @@ public class Main {
         systemTime = endTime - startTime;
         stringBuilder.append("Collection sort 시간 : " + systemTime + "ns\n");
 
+        // Quick sort
+        startTime = System.nanoTime();
+        quickSort(array, 0, array.length - 1);
+        endTime = System.nanoTime();
+        systemTime = endTime - startTime;
+        stringBuilder.append("Quick sort 시간 : " + systemTime + "ns\n");
 
         System.out.print(stringBuilder);
 //        for(int num : array){
@@ -117,5 +126,37 @@ public class Main {
             arr[i] = resultArray[i];
         }
     }
-    
+
+    /**
+     * 퀵 정렬
+     */
+
+    public static void quickSort(double[] arr, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int pivot = right;
+        int index = left;
+        double temp;
+
+        while (index < pivot) {
+            if (arr[index] > arr[pivot]) {
+                temp = arr[index];
+                arr[index] = arr[pivot - 1];
+                arr[pivot - 1] = temp;
+
+                temp = arr[pivot];
+                arr[pivot] = arr[pivot - 1];
+                arr[pivot - 1] = temp;
+                pivot--;
+            } else {
+                index++;
+            }
+        }
+
+        quickSort(arr, left, pivot - 1);
+        quickSort(arr, pivot + 1, right);
+    }
+
+
 }
