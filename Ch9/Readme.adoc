@@ -9,11 +9,16 @@
 - Recursive Linking, Linked Lists
 - 노드의 삭제, 삽입
 
-
-
 == Stacks, Queues, and ADTs
+- STACK(FILO),QUEUE(FIFO), ADT(Abstract Data Type)
+- 전위 표현식, 후위 표현식 ,후위 표현식
 
 == Binary Trees
+- 이진 트리
+- 표현식 트리
+- 전위 순회, 중위 순회, 후위 순회
+- 루트 노드 최상위 노드
+- 리프 노드 - 자식이 없는 노드
 
 == A Simple Recursive Descent Parser
 
