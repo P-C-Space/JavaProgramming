@@ -49,9 +49,8 @@ public class LinkedList {
             init(newNode);
         }else{
             temp = tail;
-            
+
         }
     }
-
-
+    
 }
