@@ -1,4 +1,4 @@
-package example.nodeexample;
+package exercise.exercise3;
 
 public class Node {
     private String data;
