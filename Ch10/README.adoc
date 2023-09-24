@@ -144,3 +144,22 @@ double average = (double) lengthSum / stringList.size();
 ----
 
 - 스트림에는 순차와 병렬이 있다. sequential + parallel
+
+- 컬렉션과 배열을 함수형 스트림으로 변환
+.함수형 프로그래밍 스타일
+- filter, map, reduce, forEach 다양한 형태로 제공
+.쉬운 병렬 처리
+- 멀티코어 프로세서 활용 연산을 병렬 처리
+.내부 반복
+- 내부적으로 반복하므로 명시적인 문을 작성할 필요없다.
+.지연 연산
+- 필요한 중간 연산만 하고, 최종 연산에서만 계산
+[source, java]
+----
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+int sum = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .mapToInt(Integer::intValue)
+                .sum();
+
+----
