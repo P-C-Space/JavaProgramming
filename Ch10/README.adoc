@@ -1,0 +1,35 @@
+= Generic Programming and Collection Classes
+
+== Generic Programming
+- 다양한 유형의 데이터에 작동하는 코드를 작성하는 것을 의미
+- ex) ArrayList<T>와 같은 유형
+
+=== SmallTalk ( Generic Programming )
+- 모든 변수는 모든 유형의 데이터를 보유할 수 있음.
+- 데이터 값들이 모두 객체 -> 자바가 추구하는 것(속도와 편의성을 위해 primitive type)
+- '+'과 같은 연산자도 클래스로 정의할 수 있다.
+- 위 두가지 기능으로 어떤 유형의 데이터라도 작동할 수 있다.
+- 그러나 이는 자유롭지만, 견고하기에는 너무 어렵습니다.
+
+=== C++ & JAVA
+- 다른 언어들은 원시타입으로 변수와 값을 저장한다.
+- smalltalk처럼 Generic에 강력하지는 않지만, C++은 templates과 Java는 변수명에 <T> 첨가함으로써 작용할 수 있다.
+
+=== Java Collection Framework (JCF)
+- Java 공통 데이터 구조를 구현하는 여러 매개변수화된 유형이 제공
+- 주로 Collection과 Map이라는 두 가지 범주로 나눌 수 있다.
+- Collection -> ArrayList, List, Set
+- Map
+
+=== Iterators and for-each Loops
+
+== Lists and Sets
+
+== Maps
+
+== Programming with the Java Collection Framework
+
+== Writing Generic Classes and Methods
+
+== Introduction the Stream API
+
