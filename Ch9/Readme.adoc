@@ -23,6 +23,8 @@
 == A Simple Recursive Descent Parser
 
 === Backus-Naur Form ( BNF )
+- regular Expression을 표현하기 위한
+- 다양한 언어로 변환할 수 있는 사람이 이해하기 쉽게 풀어쓴 언어
 
 .side-effect
 - 값을 계산하고 반환하는 것 이외의 모든 작업
