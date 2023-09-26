@@ -9,7 +9,7 @@
 * Programming in the Small II: Control
 ## 4장 [이동하기](https://github.com/P-C-Space/JavaProgramming/tree/main/Ch4)
 * Programming in the Large I: Subroutines
-## 5장 [이동하기](https://github.com/P-C-Space/JavaProgramming/tree/main/Ch5
+## 5장 [이동하기](https://github.com/P-C-Space/JavaProgramming/tree/main/Ch5)
 * Programming in the Large II: Objects and Classes
 ## 7장 [이동하기](https://github.com/P-C-Space/JavaProgramming/tree/main/Ch7)
 * Arrays, ArrayLists, and Records
