@@ -1,5 +1,7 @@
 package exercise.exercise2;
 
+import com.sun.source.tree.Tree;
+import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
@@ -42,21 +44,34 @@ public class CalcSet {
 
     }
 
-    private void printResult() {
+    public void printResult() {
         TreeSet<Integer> resultSet = new TreeSet<>(A);
+        calc(resultSet);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(A);
+        stringBuilder.append(" " + op + " ");
+        stringBuilder.append(B);
+        stringBuilder.append("         \t" + resultSet);
+        System.out.println(stringBuilder);
+    }
+
+    private void calc(TreeSet<Integer> resultSet) {
         switch (op) {
             case "+":
-                Plus.apply(B, resultSet);
+                reduce(new Plus(),B, resultSet);
                 break;
             case "*":
-                Muilty.apply(B, resultSet);
+                reduce(new Muilty(),B, resultSet);
                 break;
             case "-":
-                Minus.apply(B, resultSet);
+                reduce(new Minus(),B, resultSet);
                 break;
             default:
                 throw new IllegalArgumentException("지원하지 않는 연산자");
-
         }
+    }
+
+    private void reduce(SetOperator operator, Set<Integer> B, TreeSet<Integer> resultSet){
+        operator.apply(B,resultSet);
     }
 }

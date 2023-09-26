@@ -6,6 +6,6 @@ import java.util.TreeSet;
 public class Minus implements SetOperator{
     @Override
     public void apply(Set<Integer> B, Set<Integer> result) {
-
+        result.removeAll(B);
     }
 }
