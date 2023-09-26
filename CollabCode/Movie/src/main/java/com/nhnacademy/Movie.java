@@ -2,9 +2,9 @@ package com.nhnacademy;
 
 import java.time.LocalDate;
 import java.util.List;
-import org.apache.commons.csv.CSVRecord;
 
 public class Movie {
+
     private int movieId;
     private String title;
     private String koreanTitle;
@@ -24,26 +24,6 @@ public class Movie {
     public Movie() {
     }
 
-//    public Movie(int movieId, String title, String koreanTitle, String plot, int releaseYear, int runningTime,
-//                 int gradeID, int gradInKoreaID, String poster, LocalDate date, long boxOfficeWWGross,
-//                 long boxOfficeUSGross, long budget, String originalAuthor, String originalSource) {
-//        this.movieId = movieId;
-//        this.title = title;
-//        this.koreanTitle = koreanTitle;
-//        this.plot = plot;
-//        this.releaseYear = releaseYear;
-//        this.runningTime = runningTime;
-//        this.gradeID = gradeID;
-//        this.gradInKoreaID = gradInKoreaID;
-//        this.poster = poster;
-//        this.date = date;
-//        this.boxOfficeWWGross = boxOfficeWWGross;
-//        this.boxOfficeUSGross = boxOfficeUSGross;
-//        this.budget = budget;
-//        this.originalAuthor = originalAuthor;
-//        this.originalSource = originalSource;
-//    }
-
     private boolean isNull(String data) {
         if (data.equals("NULL")){
             return true;
@@ -52,29 +32,29 @@ public class Movie {
     }
 
 
-    public void setMovieId(String movieId) {
+    private void setMovieId(String movieId) {
         if(isNull(movieId)){
             throw new IllegalArgumentException("movieId가 null 일수는 없습니다.");
         }
         this.movieId = Integer.parseInt(movieId);
     }
 
-    public void setTitle(String title) {
+    private void setTitle(String title) {
         if(isNull(title)){
             throw new IllegalArgumentException("title이 null 일수는 없습니다.");
         }
         this.title = title;
     }
 
-    public void setKoreanTitle(String koreanTitle) {
+    private void setKoreanTitle(String koreanTitle) {
         this.koreanTitle = koreanTitle;
     }
 
-    public void setPlot(String plot) {
+    private void setPlot(String plot) {
         this.plot = plot;
     }
 
-    public void setReleaseYear(String releaseYear) {
+    private void setReleaseYear(String releaseYear) {
         if(isNull(releaseYear)) {
             this.releaseYear = 0;
         }else {
@@ -82,7 +62,7 @@ public class Movie {
         }
     }
 
-    public void setRunningTime(String runningTime) {
+    private void setRunningTime(String runningTime) {
         if(isNull(runningTime)) {
             this.runningTime = 0;
             return;
@@ -90,7 +70,7 @@ public class Movie {
         this.runningTime = Integer.parseInt(runningTime);
     }
 
-    public void setGradeID(String gradeID) {
+    private void setGradeID(String gradeID) {
         if(isNull(gradeID)){
             this.gradeID = 0;
             return;
@@ -98,7 +78,7 @@ public class Movie {
         this.gradeID = Integer.parseInt(gradeID);
     }
 
-    public void setGradInKoreaID(String gradInKoreaID) {
+    private void setGradInKoreaID(String gradInKoreaID) {
         if(isNull(gradInKoreaID)) {
             this.gradInKoreaID = 0;
             return;
@@ -106,11 +86,11 @@ public class Movie {
         this.gradInKoreaID = Integer.parseInt(gradInKoreaID);
     }
 
-    public void setPoster(String poster) {
+    private void setPoster(String poster) {
         this.poster = poster;
     }
 
-    public void setDate(String date) {
+    private void setDate(String date) {
         if (isNull(date)) {
             this.date = null;
             return;
@@ -118,7 +98,7 @@ public class Movie {
         this.date = LocalDate.parse(date); // 작동하는지 모름
     }
 
-    public void setBoxOfficeWWGross(String boxOfficeWWGross) {
+    private void setBoxOfficeWWGross(String boxOfficeWWGross) {
         if(isNull(boxOfficeWWGross))
         {
             this.boxOfficeWWGross = 0l;
@@ -127,7 +107,7 @@ public class Movie {
         this.boxOfficeWWGross = Long.parseLong(boxOfficeWWGross);
     }
 
-    public void setBoxOfficeUSGross(String boxOfficeUSGross) {
+    private void setBoxOfficeUSGross(String boxOfficeUSGross) {
         if(isNull(boxOfficeUSGross)){
             this.boxOfficeUSGross = 0l;
             return;
@@ -135,7 +115,7 @@ public class Movie {
         this.boxOfficeUSGross = Long.parseLong(boxOfficeUSGross);
     }
 
-    public void setBudget(String budget) {
+    private void setBudget(String budget) {
         if(isNull(budget)) {
             this.budget = 0;
             return;
@@ -143,11 +123,11 @@ public class Movie {
         this.budget = Integer.parseInt(budget);
     }
 
-    public void setOriginalAuthor(String originalAuthor) {
+    private void setOriginalAuthor(String originalAuthor) {
         this.originalAuthor = originalAuthor;
     }
 
-    public void setOriginalSource(String originalSource) {
+    private void setOriginalSource(String originalSource) {
         this.originalSource = originalSource;
     }
 
@@ -226,7 +206,7 @@ public class Movie {
                 + "원작 : " + this.originalSource + "\n";
     }
 
-    public void addDatas(List<String> data) {
+    public void addData(List<String> data) {
         int count = 0;
         setMovieId(data.get(count++));
         setTitle(data.get(count++));
@@ -244,4 +224,5 @@ public class Movie {
         setOriginalAuthor(data.get(count++));
         setOriginalSource(data.get(count));
     }
+
 }
