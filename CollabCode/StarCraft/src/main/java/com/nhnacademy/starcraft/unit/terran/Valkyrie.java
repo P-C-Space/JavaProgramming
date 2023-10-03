@@ -4,6 +4,6 @@ import com.nhnacademy.starcraft.unit.tribe.Terran;
 
 public final class Valkyrie extends Terran {
     public Valkyrie() {
-        super("Valkyrie", 4, 12);
+        super("Valkyrie", 4, 12, true);
     }
 }

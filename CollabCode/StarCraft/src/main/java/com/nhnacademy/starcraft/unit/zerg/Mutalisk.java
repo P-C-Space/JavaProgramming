@@ -4,6 +4,6 @@ import com.nhnacademy.starcraft.unit.tribe.Zerg;
 
 public final class Mutalisk extends Zerg {
     public Mutalisk() {
-        super("Mutalisk", 2, 8);
+        super("Mutalisk", 2, 8, true);
     }
 }
